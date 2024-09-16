@@ -190,10 +190,19 @@ def main():
         # Calculation logic for raw products
         def calculate_water_footprint(crop, region, quantity):
             water_footprints = {
-                "Wheat": 1000,   # liters per kg
-                "Rice": 2000,    # liters per kg
-                "Corn": 1500,    # liters per kg
-                "Soybean": 1200  # liters per kg
+                "Wheat": 1000,       # liters per kg
+                "Rice": 2000,        # liters per kg
+                "Corn": 1500,        # liters per kg
+                "Soybean": 1200,     # liters per kg
+                "Barley": 1420,      # liters per kg
+                "Oats": 1400,        # liters per kg
+                "Peanuts": 3100,     # liters per kg
+                "Cottonseed": 3400,  # liters per kg
+                "Sunflower": 2800,   # liters per kg
+                "Sugarcane": 1500,   # liters per kg
+                "Almonds": 16000,    # liters per kg
+                "Coffee Beans": 18000,  # liters per kg
+
             }
             regional_multiplier = states[region]  # Get multiplier for the selected region
             return water_footprints.get(crop, 0) * quantity * regional_multiplier
@@ -219,7 +228,19 @@ def main():
                 "Bottled Orange Juice": 2500,    # liters per kg
                 "Cooked Rice": 1500,             # liters per kg
                 "Steamed Tomato": 800,           # liters per kg
-                "Canned Beans": 1200             # liters per kg
+                "Canned Beans": 1200 ,           # liters per kg
+                "Bottled Orange Juice": 2500,     # liters per kg
+                "Bread (Wheat)": 1600,            # liters per kg
+                "Boiled Pasta": 1900,             # liters per kg
+                "Chocolate Bar": 17000,           # liters per kg
+                "Grilled Beef": 15400,            # liters per kg
+                "Roast Chicken": 4300,            # liters per kg
+                "Mashed Potatoes": 287,           # liters per kg
+                "Baked Apples": 822,              # liters per kg
+                "Bottled Milk": 1000,             # liters per kg
+               "Sliced Cheese": 5000,            # liters per kg
+               "Boiled Eggs": 3300,              # liters per kg
+
             }
             regional_multiplier = states[region]  # Get multiplier for the selected region
             return product_water_footprints.get(product, 0) * quantity * regional_multiplier
